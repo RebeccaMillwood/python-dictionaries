@@ -88,11 +88,49 @@
 
 import csv
 
-colours = []
+# "cheat" - dictionary reader
+# with open("colours_20.csv") as csv_file:
+#     reader = csv.DictReader(csv_file)
+#     dictionary = list(reader)
+#     print(dictionary)
+
+data = []
 
 with open("colours_20.csv") as csv_file:
     reader = csv.reader(csv_file)
     for line in reader:
-        colours.append(line)
+        data.append(line)
+        # create dictionary for each colour from the file   
+        # append the dictionary to list
 
-print(colours)
+# print(data)
+# print the list
+
+headings = data[0]
+colour_data = data[1:]
+
+# print(headings)
+# print()
+# print(colour_data)
+
+colours = [] 
+# this list is to hold the dictionaries
+
+for row in colour_data:
+    colours_dict = {}
+    for index, item in enumerate(row):
+        key = headings[index]
+        colours_dict[key] = item
+    colours.append(colours_dict)
+
+# append dictionaries to colours list
+
+# for colour in colours:
+#     print(colour)
+#     print()
+
+print(colours[15])
+
+
+
+

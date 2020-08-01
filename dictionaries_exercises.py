@@ -34,34 +34,45 @@
 # Given the list of names below, create a dictionary where each key is a name 
 # and the value is the number of times that name occurs in the list.
 
-names = [
-    "Maddy", "Bel", "Elnaz", "Gia", "Izzy",
-    "Joy", "Katie", "Maddie", "Tash", "Nic", 
-    "Rachael", "Bec", "Bec", "Tabitha", "Teagen", 
-    "Viv", "Anna", "Catherine", "Catherine", "Debby", 
-    "Gab", "Megan", "Michelle", "Nic", "Roxy", 
-    "Samara", "Sasha", "Sophie", "Teagen", "Viv"
-]
+# names = [
+#     "Maddy", "Bel", "Elnaz", "Gia", "Izzy",
+#     "Joy", "Katie", "Maddie", "Tash", "Nic", 
+#     "Rachael", "Bec", "Bec", "Tabitha", "Teagen", 
+#     "Viv", "Anna", "Catherine", "Catherine", "Debby", 
+#     "Gab", "Megan", "Michelle", "Nic", "Roxy", 
+#     "Samara", "Sasha", "Sophie", "Teagen", "Viv"
+# ]
 # print(names)
 
-names_dict = {}
+# names_dict = {}
 # need to create this dictionary
 # key = name
 # value = number of times name appears in list
 
-for i in range(len(names)):
-    names_dict[names[i]] = 1
-# print(names_dict)
+# for i in range(len(names)):
+#     names_dict[names[i]] = 1
+# # print(names_dict)
 
-for name in names_dict:
-    print(name, names_dict[name])
+# for name in names_dict:
+#     print(name, names_dict[name])
 
 
-for name in names:
-
+# for name in names:
 # need to look in names list for 'name' then count/add to count when this name appears
 
 
+# for name in names:
+#     if name not in names_dict:
+#         names_dict[name] = 1
+#     else:
+#         names_dict[name] = names_dict[name] +1  
+
+# # print(names_dict)
+# # for name in names_dict:
+# #     print(name, names_dict[name])
+
+# for key, value in names_dict.items():
+#     print(key, value)
 
 # print(names_dict)
 # use this to test if dictionary works when above is programmed
@@ -73,6 +84,15 @@ for name in names:
 # won't work until there is data in the dictionary 
 
 
+# Question 3
 
+import csv
 
+colours = []
 
+with open("colours_20.csv") as csv_file:
+    reader = csv.reader(csv_file)
+    for line in reader:
+        colours.append(line)
+
+print(colours)
